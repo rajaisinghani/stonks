@@ -1,2 +1,2 @@
 # stonks
-algorithmic trading bot in Python bot that signals buy and sell to users based on simple moving average algorithm
+Algorithmic trading bot in Python bot that sends buy and sell signals to users based on simple moving average algorithm
