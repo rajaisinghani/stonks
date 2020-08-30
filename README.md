@@ -25,7 +25,9 @@ The following script below extracts historical price data of Apple stock from th
 ```
 $ python extract_data AAPL 5y
 ```
+output below
 
+![Historical price data for APPL](/img/price_chart.png)
 
 3. Finish later
 ```
