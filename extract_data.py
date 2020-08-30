@@ -53,8 +53,8 @@ while df is None:
 
 plt.plot(df["Adj Close"], label=ticker, linewidth=2.0)
 plt.title(f'{ticker} Close Price History')
-plt.ylabel('Price (USD$)')
-plt.legend(loc='upper left')
+plt.ylabel('Price ($USD)')
+plt.legend(loc='best')
 plt.show()
 
 #write historical price data to csv file
