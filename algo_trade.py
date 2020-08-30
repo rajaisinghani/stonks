@@ -4,7 +4,8 @@ import sys
 import matplotlib.pyplot as plt
 from matplotlib import style
 
-df = pd.read_csv("stock_data.csv")
+#read dataframe from csv file
+df = pd.read_csv("stock_data.csv", index_col=0, parse_dates=True)
 
 #read stock ticker from stock_ticker.txt
 file_object = open('stock_ticker.txt', 'r') 
@@ -67,7 +68,7 @@ def signals(data):
 buy_sell = signals(df)
 df['Buy Signal Price'] = buy_sell[0]
 df['Sell Signal Price'] = buy_sell[1]
-#print(df)
+print(df)
 
 #Visualize the data
 
@@ -76,11 +77,11 @@ plt.style.use('fivethirtyeight')
 plt.figure(figsize=(14,5))
 
 plt.plot(df["Adj Close"], label=ticker, linewidth=2.0, alpha=0.6)
-plt.plot(df['SMA Short'], label='SMA30', linewidth=2.0, alpha=0.3)
-plt.plot(df['SMA Long'], label='SMA100', linewidth=2.0, alpha=0.3)
+plt.plot(df['SMA Short'], label='SMA30', linewidth=2.0, alpha=0.4)
+plt.plot(df['SMA Long'], label='SMA100', linewidth=2.0, alpha=0.4)
 plt.scatter(df.index, df['Buy Signal Price'], label='Buy', marker='^', color='green')
 plt.scatter(df.index, df['Sell Signal Price'], label='Sell', marker='v', color='red')
 plt.title(f'{ticker} Close Price History')
 plt.ylabel('Price ($USD)')
-plt.legend(loc='upper left')
+plt.legend(loc='best')
 plt.show()

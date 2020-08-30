@@ -35,7 +35,7 @@ elif timePeriod == '5y':
 elif timePeriod == '10y':
     start = end - dt.timedelta(days=10*365)
 else:
-    sys.exit("you entered an invalid time period. please enter a valid time period")
+    sys.exit("Invalid time period. please enter a valid time period")
 
 #retrieve historical stock price data of given stock ticker
 
@@ -58,6 +58,7 @@ plt.legend(loc='upper left')
 plt.show()
 
 #write historical price data to csv file
+print(df)
 df.to_csv(r'./stock_data.csv')
 
 #write stock ticker to txt file
