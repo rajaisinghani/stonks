@@ -60,4 +60,8 @@ plt.show()
 #write historical price data to csv file
 df.to_csv(r'./stock_data.csv')
 
+#write stock ticker to txt file
+file_object = open('stock_ticker.txt', 'w') 
+file_object.write(f'{ticker}') 
+file_object.close()
 
