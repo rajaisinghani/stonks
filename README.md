@@ -40,7 +40,4 @@ $ python3 algo_trade.py
 Uses a simple moving average(SMA) algorithm to indicate buy and sell signals. Runs algorithm on data extracted using ``extract_data.py``.
 
 *example output*
-```
-$ python3 algo_trade.py
-```
 ![Algorithmic chart data for APPL](/img/algo_trade.png)
