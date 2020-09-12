@@ -37,7 +37,7 @@ $ python3 algo_trade.py
 ```
 *Important: uses the ``<stock_ticker>``in ``<stock_ticker.txt>``. Must run ``extract_data.py`` first before this script*
 
-Uses a simple moving average(SMA) algorithm to indicate buy and sell signals. 
+Uses a simple moving average(SMA) algorithm to indicate buy and sell signals. Runs algorithm on data extracted using ``extract_data.py``.
 
 *example output*
 ```
